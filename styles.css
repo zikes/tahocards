@@ -1,16 +1,12 @@
 :root {
   --card-width: calc(200px * 1.8);
-  --card-height: calc(300px * 1.8);
+  --card-height: calc(260px * 1.8);
 
   --color1: #ec9bb6;
   --color2: #ccac6f;
   --color3: #69e4a5;
   --color4: #8ec5d6;
   --color5: #b98cce;
- 
-  --astrafront: url(cards/astra.png);
-  --moxxfront: url(cards/moxx.png);
-  --yuunafront: url(cards/yuuna.png);
 }
 
 .card {
@@ -23,26 +19,26 @@
   box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
+  /*
   background-color: transparent;
   background-image: var(--front);
   background-size: calc(var(--card-width) * 1.5) calc(var(--card-height) * 1.5);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  */
   transform-origin: center;
+}
+.card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  width: calc(var(--card-width) * 1.5);
 }
 
 .card:hover {
   box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
-}
-
-.card.astra {
-  --front: var(--astrafront);
-}
-.card.moxx {
-  --front: var(--moxxfront);
-}
-.card.yuuna {
-  --front: var(--yuunafront);
 }
 
 .card:before,
