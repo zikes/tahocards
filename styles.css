@@ -1,4 +1,7 @@
 :root {
+  --card-width: calc(200px * 1.8);
+  --card-height: calc(300px * 1.8);
+
   --color1: #ec9bb6;
   --color2: #ccac6f;
   --color3: #69e4a5;
@@ -7,8 +10,7 @@
  
   --astrafront: url(cards/astra.png);
   --moxxfront: url(cards/moxx.png);
-  --card-width: calc(200px * 1.8);
-  --card-height: calc(300px * 1.8);
+  --yuunafront: url(cards/yuuna.png);
 }
 
 .card {
@@ -36,9 +38,11 @@
 .card.astra {
   --front: var(--astrafront);
 }
-
 .card.moxx {
   --front: var(--moxxfront);
+}
+.card.yuuna {
+  --front: var(--yuunafront);
 }
 
 .card:before,
