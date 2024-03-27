@@ -1,6 +1,6 @@
 :root {
-  --card-width: calc(200px * 1.8);
-  --card-height: calc(260px * 1.8);
+  --card-width: calc(55px * 3 * 2);
+  --card-height: calc(72px * 3 * 2);
 
   --color1: #ec9bb6;
   --color2: #ccac6f;
@@ -13,19 +13,14 @@
   width: var(--card-width);
   height: var(--card-height);
   position: relative;
+  box-sizing: border-box;
   margin: 20px;
+  padding: 20px;
   z-index: 10;
   touch-action: none;
   box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
-  /*
-  background-color: transparent;
-  background-image: var(--front);
-  background-size: calc(var(--card-width) * 1.5) calc(var(--card-height) * 1.5);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  */
   transform-origin: center;
 }
 .card img {
@@ -306,11 +301,12 @@ p {
   perspective: 2000px;
   position: relative;
   z-index: 1;
+  flex-wrap: wrap;
   transform: translate3d(0.1px, 0.1px, 0.1px);
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .cards {
     flex-direction: row;
   }
