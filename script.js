@@ -39,7 +39,7 @@ $cards
     var grad_pos = `background-position: ${lp}% ${tp}%;`
     var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
     var opc = `opacity: ${p_opc/100};`
-    var tf = `transform: rotateX(${ty}deg) rotateY(${tx}deg)`
+    var tf = `transform: perspective(2000px) rotateX(${ty}deg) rotateY(${tx}deg)`
     // need to use a <style> tag for psuedo elements
     var style = `
       .card:hover:before { ${grad_pos} }  /* gradient */

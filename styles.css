@@ -1,6 +1,7 @@
 :root {
   --card-width: calc(55px * 3 * 2);
   --card-height: calc(72px * 3 * 2);
+  --perspective: 2000px;
 
   --color1: #ec9bb6;
   --color2: #ccac6f;
@@ -27,13 +28,21 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: perspective(var(--perspective)) translateY(-50%) translateX(-50%);
+  transform-origin: center;
 
   width: calc(var(--card-width) * 1.5);
+}
+.card img:not(:first-of-type) {
+  transition: opacity 0.5s ease;
+  opacity: 0.33;
 }
 
 .card:hover {
   box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+}
+.card:hover img:not(:first-of-type) {
+  opacity: 1;
 }
 
 .card:before,
@@ -231,36 +240,36 @@
 }
 @-webkit-keyframes holoCard {
   0%, 100% {
-    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(0deg) rotateY(0deg);
   }
   5%, 8% {
-    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
   }
   13%, 16% {
-    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
   }
   35%, 38% {
-    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+    transform: perspective(var(--perspective)) rotateZ(3deg) rotateX(12deg) rotateY(20deg);
   }
   55% {
-    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+    transform: perspective(var(--perspective)) rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
   }
 }
 @keyframes holoCard {
   0%, 100% {
-    transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(0deg) rotateY(0deg);
   }
   5%, 8% {
-    transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
   }
   13%, 16% {
-    transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
+    transform: perspective(var(--perspective)) rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
   }
   35%, 38% {
-    transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
+    transform: perspective(var(--perspective)) rotateZ(3deg) rotateX(12deg) rotateY(20deg);
   }
   55% {
-    transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
+    transform: perspective(var(--perspective)) rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
   }
 }
 
@@ -269,7 +278,6 @@ html, body {
   background-color: #333844;
   padding: 0;
   z-index: 1;
-  transform: translate3d(0, 0, 0.1px);
 }
 
 body {
@@ -298,11 +306,9 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  perspective: 2000px;
   position: relative;
   z-index: 1;
   flex-wrap: wrap;
-  transform: translate3d(0.1px, 0.1px, 0.1px);
 }
 
 
