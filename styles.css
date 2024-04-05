@@ -50,7 +50,8 @@
 }
 
 .card:before,
-.card:after {
+.card:after,
+.card .background{
   content: "";
   position: absolute;
   left: 0;
@@ -62,6 +63,14 @@
   mix-blend-mode: color-dodge;
   transition: all 0.33s ease;
 }
+
+.card .background{
+  opacity: 1;
+  background-position: 50% 50%;
+  background-size: 150% 150%;
+  transition: none;
+}
+
 
 .card:before {
   background-position: 50% 50%;
