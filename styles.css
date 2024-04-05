@@ -60,7 +60,7 @@
 .card .background {
   opacity: 1;
   background-position: 50% 50%;
-  background-size: 150% 150%;
+  background-size: 120% 120%;
   transition: all 0.33s ease;
 }
 .card:hover .background {
