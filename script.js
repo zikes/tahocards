@@ -32,8 +32,8 @@ $cards
     var tp = (50+(py - 50)/1.5);
     var px_spark = (50+(px - 50)/7);
     var py_spark = (50+(py - 50)/7);
-    var px_bg = Math.abs(100-(50+(px-50)/1.1));
-    var py_bg = Math.abs(100-(50+(py-50)/1.1));
+    var px_bg = (50+(px-50)/1.1);
+    var py_bg = (50+(py-50)/1.1);
     var p_opc = 20+(Math.abs(pa)*1.5);
     var ty = ((tp - 50)/2) * -1;
     var tx = ((lp - 50)/1.5) * .5;
