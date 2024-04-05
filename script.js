@@ -22,8 +22,8 @@ $cards
     // math for mouse position
     var l = pos[0];
     var t = pos[1];
-    var h = $card.height();
-    var w = $card.width();
+    var h = $card.height() + 200;
+    var w = $card.width() + 200;
     var px = Math.abs(Math.floor(100 / w * l)-100);
     var py = Math.abs(Math.floor(100 / h * t)-100);
     var pa = (50-px)+(50-py);
@@ -32,8 +32,8 @@ $cards
     var tp = (50+(py - 50)/1.5);
     var px_spark = (50+(px - 50)/7);
     var py_spark = (50+(py - 50)/7);
-    var px_bg = (50+(px-50)/1.1);
-    var py_bg = (50+(py-50)/1.1);
+    var px_bg = (50+(px-50)/2.7);
+    var py_bg = (50+(py-50)/2.7);
     var p_opc = 20+(Math.abs(pa)*1.5);
     var ty = ((tp - 50)/2) * -1;
     var tx = ((lp - 50)/1.5) * .5;
