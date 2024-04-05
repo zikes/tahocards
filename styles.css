@@ -64,10 +64,13 @@
   transition: all 0.33s ease;
 }
 
-.card .background{
+.card .background {
   opacity: 1;
   background-position: 50% 50%;
   background-size: 150% 150%;
+  transition: all 0.33s ease;
+}
+.card:hover .background {
   transition: none;
 }
 

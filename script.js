@@ -41,11 +41,13 @@ $cards
     var grad_pos = `background-position: ${lp}% ${tp}%;`
     var sprk_pos = `background-position: ${px_spark}% ${py_spark}%;`
     var bg_pos = `background-position: ${px_bg}% ${py_bg}%;`
+    var sprite_pos = `left: ${px_spark}%; top: ${py_spark}%;`
     var opc = `opacity: ${p_opc/100};`
     var tf = `transform: perspective(2000px) rotateX(${ty}deg) rotateY(${tx}deg)`
     // need to use a <style> tag for psuedo elements
     var style = `
       .card:hover .background { ${bg_pos}  }
+      .card:hover .sprite { ${sprite_pos}  }
       .card:hover:before { ${grad_pos} }  /* gradient */
       .card:hover:after { ${sprk_pos} ${opc} }   /* sparkles */
     `
